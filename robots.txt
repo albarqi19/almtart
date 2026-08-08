@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# ⚠️ بدّل النطاق عند شراء دومينٍ خاصٍّ للمكتب
+Sitemap: https://almutared.sites.alraedlaw.com/sitemap.xml

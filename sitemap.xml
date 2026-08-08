@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ⚠️ بدّل النطاق عند شراء دومينٍ خاصٍّ للمكتب، وحدّث lastmod عند كل تعديلٍ جوهريّ -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://almutared.sites.alraedlaw.com/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://almutared.sites.alraedlaw.com/assets/img/og-image.png</image:loc>
+      <image:title>المحامي عبدالله بن سعد بن سراج آل مُطارد — للتوثيق والمحاماة والاستشارات القانونية</image:title>
+    </image:image>
+  </url>
+</urlset>

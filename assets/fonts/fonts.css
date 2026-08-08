@@ -1,0 +1,187 @@
+/* ==========================================================================
+   خطوط الموقع — مستضافة محلياً بالكامل، بلا أي اتصال بخوادم خارجية.
+
+   ١) خطّ العناوين المطلوب: KFGQPC Uthman Taha Naskh  (مجمع الملك فهد)
+      ⚠️ يُقدَّم كملف .ttf أصليٍّ غير معدَّل — لا woff2 ولا تجزئة (subset).
+         السبب: بند الترخيص رقم (١) يمنع التعديل والتحوير:
+         "The Font Software cannot be Sold, Modified, Altered, Translated,
+          Reverse Engineered, Decompiled, Disassembled, Reproduced..."
+         وتحويلُ الصيغة والتجزئةُ كلاهما «تعديلٌ» للبرمجية، فلم يُطبَّقا.
+         الملفان مطابقان بايتاً ببايت للأصل من fonts.qurancomplex.gov.sa
+         (تُحقِّق منه SHA-256). التفصيل في KFGQPC-LICENSE.txt.
+      ⚠️ الخط لا يحوي حروفاً لاتينية (٣٦ محرفاً لاتينياً فقط: أرقامٌ وترقيم)،
+         لذا حُصر نطاقه في العربية ويسقط ما عداها إلى Amiri تلقائياً.
+
+   ٢) البديل الحرّ / الاحتياطي: Amiri 1.003 (SIL OFL 1.1) — نسخيٌّ كلاسيكي.
+      مجزّأ ومحوَّل إلى woff2 (الترخيص يجيز ذلك صراحةً). انظر OFL-Amiri.txt.
+
+   ٣) خطّ المتن: IBM Plex Sans Arabic (SIL OFL 1.1) — أوزان 300/400/500/600.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   ١) KFGQPC Uthman Taha Naskh — أصليٌّ غير معدَّل (.ttf)
+   ========================================================================== */
+@font-face {
+  font-display: swap;
+  font-family: 'Uthman Taha Naskh';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./uthman-taha-naskh-400.ttf') format('truetype');
+  /* النطاقُ يشمل الترقيمَ الأساسيَّ والمسافةَ عمداً: الخطُّ يحويها فعلاً
+     (فُحص جدولُ cmap)، وحصرُه في العربية وحدها كان يُسقط **المسافة** إلى
+     Amiri، فيُحمَّل الخطُّ الاحتياطيُّ بوزنيه لأجل الفراغات وحدها (٢٣٢KB). */
+  unicode-range: U+0020-003E, U+005B-005D, U+007B, U+007D, U+00AB, U+00B0,
+                 U+00B7, U+00BB, U+00D7, U+00F7,
+                 U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Uthman Taha Naskh';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./uthman-taha-naskh-700.ttf') format('truetype');
+  /* النطاقُ يشمل الترقيمَ الأساسيَّ والمسافةَ عمداً: الخطُّ يحويها فعلاً
+     (فُحص جدولُ cmap)، وحصرُه في العربية وحدها كان يُسقط **المسافة** إلى
+     Amiri، فيُحمَّل الخطُّ الاحتياطيُّ بوزنيه لأجل الفراغات وحدها (٢٣٢KB). */
+  unicode-range: U+0020-003E, U+005B-005D, U+007B, U+007D, U+00AB, U+00B0,
+                 U+00B7, U+00BB, U+00D7, U+00F7,
+                 U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+
+/* ==========================================================================
+   ٢) Amiri — OFL، مجزّأ إلى العربية + اللاتيني الأساسي + الترقيم
+   ========================================================================== */
+@font-face {
+  font-display: swap;
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./amiri-400-arabic.woff2') format('woff2');
+  unicode-range: U+0020-007E, U+00A0, U+00AB, U+00BB, U+0600-06FF, U+0750-077F,
+                 U+200C-200F, U+2010-2011, U+2013-2014, U+2018-2019, U+201C-201D,
+                 U+2026, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./amiri-700-arabic.woff2') format('woff2');
+  unicode-range: U+0020-007E, U+00A0, U+00AB, U+00BB, U+0600-06FF, U+0750-077F,
+                 U+200C-200F, U+2010-2011, U+2013-2014, U+2018-2019, U+201C-201D,
+                 U+2026, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+
+/* ==========================================================================
+   ٣) IBM Plex Sans Arabic — خطّ المتن، أوزان 300/400/500/600
+   ========================================================================== */
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./ibmplexsansarabic-300-arabic.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./ibmplexsansarabic-300-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./ibmplexsansarabic-300-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./ibmplexsansarabic-400-arabic.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./ibmplexsansarabic-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./ibmplexsansarabic-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./ibmplexsansarabic-500-arabic.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./ibmplexsansarabic-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./ibmplexsansarabic-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./ibmplexsansarabic-600-arabic.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./ibmplexsansarabic-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./ibmplexsansarabic-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* ==========================================================================
+   متغيّرات جاهزة للاستعمال
+   ملاحظة: 'Uthman Taha Naskh' أوّلاً لأنه المطلوب، و'Amiri' بعده يلتقط
+   اللاتينيَّ والمحارفَ التي لا يغطّيها خطُّ المجمع (الشرطة الطويلة مثلاً).
+   ========================================================================== */
+:root {
+  --font-heading: 'Uthman Taha Naskh', 'Amiri', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
