@@ -2,7 +2,7 @@
 
 موقعٌ تعريفيٌّ من صفحةٍ واحدة — للتوثيق والمحاماة والاستشارات القانونية · مكة المكرمة، بطحاء قريش.
 
-**منشورٌ على:** <https://almutared.sites.alraedlaw.com>
+**منشورٌ على:** <https://mutared.com>
 كلُّ دفعةٍ إلى `main` تُنشر تلقائياً عبر Coolify (webhook على سيرفر المواقع).
 
 ## البنية
@@ -36,7 +36,7 @@ robots.txt · sitemap.xml · site.webmanifest
 
 | الموضع | القيمة الحالية |
 |---|---|
-| `index.html` · canonical · og · twitter · JSON-LD | `https://almutared.sites.alraedlaw.com` |
+| `index.html` · canonical · og · twitter · JSON-LD | `https://mutared.com` |
 | `robots.txt` · `sitemap.xml` | النطاق نفسه |
 | `assets/js/main.js` · `PORTAL_URL` | `https://alraedlaw.com` — **مؤقّت** |
 
